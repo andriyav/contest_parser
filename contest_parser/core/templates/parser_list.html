@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cotest_Parcer</title>
+
+</head>
+<body>
+    {% for inp in input %}
+    {% for key, value in inp.parsing.items %}
+    {% if value == '1' %}
+    <a href="https://www.qrz.com/db/{{key}}"><span style="background-color: #ee6b69">{{key}}</span></a>
+    {% elif value == '0' %}
+    <a href="https://www.qrz.com/db/{{key}}"><span style="background-color: #FFFF00">{{key}}</span></a>
+
+    {% else %}
+    {{key}}
+    {% endif %}
+    <br>
+    {% endfor %}
+    <br>
+    {% endfor %}
+</body>
+</html>
